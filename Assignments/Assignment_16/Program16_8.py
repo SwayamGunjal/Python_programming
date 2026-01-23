@@ -1,5 +1,5 @@
 #########################################################################################################
-#   Function name   :   main
+#   Function name   :   Pattern
 #   Description     :   Prints a star (*) repeatedly based on the accepted number.
 #   Input           :   Integer
 #   Output          :   Nothing
@@ -7,13 +7,16 @@
 #   Date            :   22/01/26
 #########################################################################################################
 
+def Pattern(No):
+    for i in range(1, No + 1):
+        print("*", end = "\t")
+
 #   Main function
 def main(): 
     
-    No = int(input("Enter a number : "))
+    Val = int(input("Enter a number : "))
 
-    for i in range(1, No + 1):
-        print("*")
+    Pattern(Val)
 
 #   Starter Condition
 if __name__ == "__main__":

@@ -1,5 +1,5 @@
 #########################################################################################################
-#   Function name   :   main
+#   Function name   :   StrLen
 #   Description     :   Calculates and prints the length of the input string.
 #   Input           :   Str
 #   Output          :   Integer
@@ -7,17 +7,24 @@
 #   Date            :   22/01/26
 #########################################################################################################
 
+def StrLen(Val):
+    Count = 0
+
+    for i in Val:
+        Count += 1
+
+    return Count
+
 #   Main function
 def main(): 
     
-    Count = 0
+    Ret = 0
 
     Name = input("Enter name : ")
 
-    for i in Name:
-        Count += 1
+    Ret = StrLen(Name)
 
-    print(Count)
+    print(Ret)
     
 
 #   Starter Condition

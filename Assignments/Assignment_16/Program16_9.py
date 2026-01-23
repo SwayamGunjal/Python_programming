@@ -1,5 +1,5 @@
 #########################################################################################################
-#   Function name   :   main
+#   Function name   :   FirstEven
 #   Description     :   Prints first 10 even numbers.
 #   Input           :   Nothing
 #   Output          :   Nothing
@@ -7,11 +7,14 @@
 #   Date            :   22/01/26
 #########################################################################################################
 
+def FirstEven():
+    for i in range(2, 21, 2):
+        print(i)
+
 #   Main function
 def main(): 
 
-    for i in range(2, 21, 2):
-        print(i)
+    FirstEven()
 
 #   Starter Condition
 if __name__ == "__main__":

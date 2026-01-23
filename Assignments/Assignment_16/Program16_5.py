@@ -7,11 +7,13 @@
 #   Date            :   21/01/26
 #########################################################################################################
 
-#   Main function
-def main(): 
-    
+def Reverse():
     for i in range(10,0,-1):
         print(i)
+
+#   Main function
+def main(): 
+    Reverse()    
 
 #   Starter Condition
 if __name__ == "__main__":

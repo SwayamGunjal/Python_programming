@@ -1,17 +1,19 @@
 #########################################################################################################
-#   Function name   :   main
+#   Function name   :   Display
 #   Description     :   Displays "Marvellous" 5 times on console.
 #   Input           :   Nothing
 #   Output          :   Nothing
 #   Author          :   Swayam Satish Gunjal
 #   Date            :   21/01/26
 #########################################################################################################
+def Display():
+    for i in range(1,6):
+        print("Marvellous")
 
 #   Main function
 def main(): 
+    Display()
     
-    for i in range(1,6):
-        print("Marvellous")
 
 #   Starter Condition
 if __name__ == "__main__":
