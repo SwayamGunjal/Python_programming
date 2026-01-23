@@ -1,5 +1,5 @@
 #########################################################################################################
-#   Function name   :   main
+#   Function name   :   DigiSum
 #   Description     :   Calculates and prints the sum of digits of a given number.
 #   Input           :   Integer
 #   Output          :   Integer
@@ -8,21 +8,30 @@
 #########################################################################################################
 
 '''
-Input  : Enter a number : 5187934
+Input  : 5187934
 Output : 37
 
 '''
 
-def main(): 
+def DigiSum(no):
     Sum = 0
-    no = int(input("Enter a number : "))
-    
+    Digit = 0
+
     while no != 0:
         Digit = no % 10
         Sum = Sum + Digit
         no = no // 10
 
-    print(Sum)
+    return Sum
+
+def main(): 
+    Ret = 0
+
+    Val = int(input("Enter a number : "))
+    
+    Ret = DigiSum(Val)
+
+    print(Ret)
 
 #   Starter Condition
 if __name__ == "__main__":

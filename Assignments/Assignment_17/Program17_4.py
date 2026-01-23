@@ -12,18 +12,24 @@ Input  : 12
 Output : 16
 
 '''
-
-def main(): 
+def SumFact(no,no1):
     Result = 0
 
-    no = int(input("Enter a number : "))
-    no1 = int(no / 2)
-    
     for i in range(1, no1 + 1):
         if ((no % i) == 0):
             Result = Result + i
     
-    print(Result)
+    return Result
+
+def main(): 
+    Ret = 0    
+
+    Val = int(input("Enter a number : "))
+    Val1 = int(Val / 2)
+        
+    Ret = SumFact(Val,Val1)
+    
+    print(Ret)
 
 
 #   Starter Condition

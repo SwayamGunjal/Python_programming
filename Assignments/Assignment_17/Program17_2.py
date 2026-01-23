@@ -1,8 +1,8 @@
 #########################################################################################################
-#   Function name   :   main
+#   Function name   :   Display
 #   Description     :   Prints a square star pattern of size N × N.
 #   Input           :   Integer
-#   Output          :   Star (*) pattern
+#   Output          :   Nothing
 #   Author          :   Swayam Satish Gunjal
 #   Date            :   23/01/26
 #########################################################################################################
@@ -17,18 +17,21 @@ Output :
 *       *       *       *       *
 *       *       *       *       *
 *       *       *       *       *
+
 '''
+
+def Display(No):
+    for i in range(1,No + 1):
+        for j in range(1, No + 1):
+            print("*", end="\t")
+        print()
 
 #   Main function
 def main(): 
     
-    no = int(input("Enter a number : "))
+    Val = int(input("Enter a number : "))
 
-    for i in range(1,no + 1):
-        for j in range(1, no + 1):
-            print("*", end="\t")
-        print()
-
+    Display(Val)
 
 #   Starter Condition
 if __name__ == "__main__":

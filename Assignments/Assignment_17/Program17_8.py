@@ -1,5 +1,5 @@
 #########################################################################################################
-#   Function name   :   main
+#   Function name   :   Display
 #   Description     :   Prints a right-angled number triangle pattern.
 #   Input           :   Integer
 #   Output          :   Nothing
@@ -20,15 +20,19 @@ Output :
 
 '''
 
-def main(): 
-
-    no = int(input("Enter a number : "))
-    
+def Display(no):
     for i in range(1, no + 1):
         for j in range(1, no + 1):
             if i >= j:
                 print(j, end = "\t")
         print()
+
+def main(): 
+
+    no = int(input("Enter a number : "))
+    
+    Display(no)
+    
 
 #   Starter Condition
 if __name__ == "__main__":

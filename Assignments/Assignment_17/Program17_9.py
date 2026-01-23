@@ -8,21 +8,27 @@
 #########################################################################################################
 
 '''
-Input  : Enter a number : 5187934
+Input  : 5187934
 Output : 7
 
 '''
 
-def main(): 
+def DigiCount(no):
     Count = 0
-    no = int(input("Enter a number : "))
-    
+
     while no != 0:
-        Digit = no % 10
         Count += 1
         no = no // 10
 
-    print(Count)
+    return Count
+
+def main(): 
+    
+    Val = int(input("Enter a number : "))
+    
+    Ret = DigiCount(Val)
+
+    print(Ret)
 
 #   Starter Condition
 if __name__ == "__main__":

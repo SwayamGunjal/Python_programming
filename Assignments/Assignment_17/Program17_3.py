@@ -1,5 +1,5 @@
 #########################################################################################################
-#   Function name   :   main
+#   Function name   :   Factorial
 #   Description     :   Calculates and prints the factorial of a given number.
 #   Input           :   Integer
 #   Output          :   Integer
@@ -13,15 +13,22 @@ Output : 120
 
 '''
 
-#   Main function
-def main(): 
+def Factorial(No):
     fact = 1
-    no = int(input("Enter a number : "))
-
-    for i in range(1,no + 1):
+    
+    for i in range(1,No + 1):
         fact = fact * i
     
-    print(fact)
+    return fact
+
+#   Main function
+def main(): 
+    Ret = 1
+    no = int(input("Enter a number : "))
+
+    Ret = Factorial(no)
+    
+    print(Ret)
 
 
 #   Starter Condition
