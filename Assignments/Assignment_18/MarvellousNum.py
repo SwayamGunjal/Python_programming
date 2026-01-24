@@ -5,7 +5,7 @@
 #   Input           :   List
 #   Output          :   Boolean
 #   Author          :   Swayam Satish Gunjal
-#   Date            :   23/01/26
+#   Date            :   24/01/26
 ##############################################################################################################
 
 def ChkPrime(No):

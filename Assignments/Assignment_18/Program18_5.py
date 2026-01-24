@@ -1,7 +1,7 @@
 #########################################################################################################
-#   Function name   :   FreqElement
-#   Description     :   Returns the frequency of the given element in the list. 
-#   Input           :   List, Integer
+#   Function name   :   ListPrime
+#   Description     :   Returns the addition of all prime numbers from the given list.
+#   Input           :   List
 #   Output          :   Integer
 #   Author          :   Swayam Satish Gunjal
 #   Date            :   24/01/26
