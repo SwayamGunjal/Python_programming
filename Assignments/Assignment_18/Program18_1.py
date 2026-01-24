@@ -14,6 +14,7 @@ def ElementSum(Data):
         Sum = Sum + Data
     print(Sum)
 
+
 def main(): 
     
     Size = 0
@@ -33,8 +34,8 @@ def main():
     print("Entered list : ",Data)
 
     ElementSum(Data)
+  
     
-
 #   Starter Condition
 if __name__ == "__main__":
     main()

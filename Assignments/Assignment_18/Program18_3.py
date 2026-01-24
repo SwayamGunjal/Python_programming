@@ -38,6 +38,7 @@ def main():
     
     print("Min : ",Ret)
 
+
 #   Starter Condition
 if __name__ == "__main__":
     main()

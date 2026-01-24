@@ -18,6 +18,7 @@ def ListPrime(Data):
     
     return Sum
 
+
 def main(): 
     
     Val1 = 0
@@ -38,9 +39,6 @@ def main():
     Ret1 = ListPrime(Data)
 
     print("Addition of Prime numbers : ",Ret1)
-
-    
-    
 
 
 #   Starter Condition

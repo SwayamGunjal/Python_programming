@@ -15,7 +15,7 @@ def FreqElement(Data, Val):
             Count += 1
 
     return Count
-    
+
 
 def main(): 
     
@@ -41,6 +41,7 @@ def main():
     Ret = FreqElement(Data,Val1)
     
     print("Frequency of the given element is :",Ret)
+
 
 #   Starter Condition
 if __name__ == "__main__":
