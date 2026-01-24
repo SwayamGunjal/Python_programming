@@ -21,7 +21,6 @@ def ListPrime(Data):
 
 def main(): 
     
-    Val1 = 0
     Size = 0
     Value = list()
 
