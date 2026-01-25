@@ -12,7 +12,7 @@ import threading
 def EvenFact(No):
     Sum = 0
 
-    for i in range(2,No+1,2):
+    for i in range(2, No + 1, 2):
         if ((No % i) == 0):
             Sum = Sum + i
     
@@ -30,7 +30,7 @@ def EvenFact(No):
 def OddFact(No):
     Sum = 0
 
-    for i in range(1,No+1,2):
+    for i in range(1, No + 1, 2):
         if ((No % i) == 0):
             Sum = Sum + i
     

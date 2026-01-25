@@ -13,7 +13,7 @@ def Display1():
 
     print("1 to 50 :")
     
-    for i in range(1,51):
+    for i in range(1, 51):
         print(i)
     
 
@@ -30,7 +30,7 @@ def Display2():
 
     print("50 to 1 :")
 
-    for i in range(51,1,-1):
+    for i in range(51, 1, -1):
         print(i)
 
 #########################################################################################################
