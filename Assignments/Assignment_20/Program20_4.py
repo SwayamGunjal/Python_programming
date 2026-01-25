@@ -85,11 +85,12 @@ def main():
     Digits = threading.Thread(target=DigiCnt, args=(Data,))
 
     Small.start()
-    Capital.start()
-    Digits.start()
-
     Small.join()
+
+    Capital.start()
     Capital.join()
+
+    Digits.start()
     Digits.join()
 
 
