@@ -91,26 +91,22 @@ if __name__ == "__main__":
     main()
 
 
-# -------------------------------------------------------------------------------------------------------------------- #
-# Key observation : I initially tried to run it on 4 threads without the lock hoping to meet the race condition,       #
-#                   but because of CPython uses the GIL, Python bytecode did not execute in parallel, masking the      #
-#                   race condition. Thus i was unable to practically see the race condition occuring.                  #
-#                   Then i added the rest of the 4 threads in an attempt to overload the scheduler                     #
-#                   into hitting the race condition again but it still didn't hit it.                                  #
-# -------------------------------------------------------------------------------------------------------------------- #
-# Learnings       : 1. After some digging on the web, i found out the clever architecture of CPython and it having     #
-#                      GIL, unlike its other varients such as IronPython and Jython.                                   #
-#                      ----------------------------------------------------------------------------------------------- #
-#                   2. I learned that GIL executes 1 thread at a time which ultimately prevents race condition         #
-#                      from occuring but sometimes when it switches after a fixed number of bytecode instructions      #
-#                      or during blocking operations (I/O, sleep, etc.)                                                #
-#                      ----------------------------------------------------------------------------------------------- #
-#                   3. I learned that, it can hit the race conditions on a different hardware containing less cores.   #
-#                      ----------------------------------------------------------------------------------------------- #
-#                   4. And it can hit the race condition on other varients of python such as Jython, IronPython.       #
-# -------------------------------------------------------------------------------------------------------------------- #
-# Key takeaway    : Even though it didn't hit the race condition on my hardware doesn't mean it won't hit on a         #
-#                   different hardware having less cores or another varient of python(Jython, IronPython,etc).         #
-#                   Which is exactly the reason why we need to lock the threads to avoid the race condition as         #
-#                   the same code becomes platform dependent if the lock is not enabled.                               #
-# -------------------------------------------------------------------------------------------------------------------- #
+# ------------------------------------------------------------------------------------------------------------------------ #
+# Key Observation : I initially attempted to observe a race condition by running multiple threads without a lock.          #
+#                   However, in CPython, the Global Interpreter Lock (GIL) allows only one thread to execute Python        #
+#                   bytecode at a time, which masked the race condition in my experiments. Increasing the number           #
+#                   of threads did not expose the issue due to the same behavior.                                          #
+# ------------------------------------------------------------------------------------------------------------------------ #
+# Learnings       : 1. CPython uses a Global Interpreter Lock (GIL), unlike implementations such as Jython and IronPython. #
+#                      --------------------------------------------------------------------------------------------------- #
+#                   2. The GIL reduces the likelihood of race conditions by serializing bytecode execution, but it does    #
+#                       not eliminate them.                                                                                #
+#                      --------------------------------------------------------------------------------------------------- #
+#                   3. Race conditions depend on scheduling and interpreter behavior rather than hardware core count.      #
+#                      --------------------------------------------------------------------------------------------------- #
+#                   4. Python implementations without a GIL (Jython, IronPython) can expose race conditions more easily.   #
+# ------------------------------------------------------------------------------------------------------------------------ #
+# Key Takeaway    : Even if a race condition is not practically observable on a specific platform or interpreter,          #
+#                   the code is still logically unsafe. Therefore, explicit locking is required to ensure correct,         #
+#                   portable, and platform-independent behavior.                                                           #
+# ------------------------------------------------------------------------------------------------------------------------ #
