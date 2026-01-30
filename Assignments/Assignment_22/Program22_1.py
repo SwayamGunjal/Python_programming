@@ -1,36 +1,50 @@
 ########################################################################################################################
 #
-#   Class name      :   BookStore
-#   Description     :   Implement a class with instance variables, a class variable,
-#                       constructor to initialize data and increment book count,
-#                       and a method to display book details.
-#   Input           :   Str, Str
+#   Class name      :   Demo
+#   Description     :   Implement a class with two instance variables, one class variable,
+#                       constructor, and two instance methods to display instance data.
+#   Input           :   Integer, Integer
 #   Output          :   Void
 #   Author          :   Swayam Satish Gunjal
 #   Date            :   30/01/2026
 #
 ########################################################################################################################
 
-class BookStore:
-    NoOfBooks = 0
+class Demo:
+    Value = 10
 
-    def __init__(self, name, author):
-        self.Name = name
-        self.Author = author
-        BookStore.NoOfBooks += 1  
-    
-    def Display(self):
-        print(f"{self.Name} by {self.Author}.")
-        print(f"No of books : {BookStore.NoOfBooks}")
+    def __init__(self, A, B):
+        self.no1 = A
+        self.no2 = B
+
+    def Fun(self):
+        print("Inside Fun")
+        print("Instance Variable no1 :", self.no1)
+        print("Instance Variable no2 :", self.no2)
+
+    def Gun(self):
+        print("Inside Gun")
+        print("Instance Variable no1 :", self.no1)
+        print("Instance Variable no2 :", self.no2)
 
 def main():
-    Obj1 = BookStore("Linux System Programming", "Robert Love")
+    Val1 = 0
+    Val2 = 0
 
-    Obj1.Display()
+    print("Enter the first number :")
+    Val1 = int(input())
 
-    Obj2 = BookStore("C Programming", "Dennis Ritche")
+    print("Enter the second number :")
+    Val2 = int(input())
+    
+    Obj1 = Demo(11, 21)
+    Obj2 = Demo(51, 101)
 
-    Obj2.Display()
+    Obj1.Fun()
+    Obj2.Fun()
+
+    Obj1.Gun()
+    Obj2.Gun()
 
 if __name__ == "__main__":
     main()
