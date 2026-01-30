@@ -5,7 +5,7 @@
 #                       such as checking prime number, checking perfect number,
 #                       displaying factors, and calculating sum of factors.
 #   Input           :   Integer
-#   Output          :   Boollean, Integer
+#   Output          :   Boolean, Integer
 #   Author          :   Swayam Satish Gunjal
 #   Date            :   30/01/2026
 #
